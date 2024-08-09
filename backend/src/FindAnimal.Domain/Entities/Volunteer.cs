@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FindAnimal.Domain
+namespace FindAnimal.Domain.Entities
 {
     public class Volunteer
     {
