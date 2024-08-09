@@ -12,12 +12,12 @@
         public string LocationAddress { get; set; }
         public int Height { get; set; }
         public int Weigth { get; set; }
+        public string ContactNumber {  get; set; }
         public DateTime BirthDate { get; set; }
-        public bool Castrated { get; set; }
-        public bool Vaccinated { get; set; }
-        public bool Visible { get; set; }
-        public User Owner { get; set; }
-        public Credentials Credentials { get; set; }
+        public bool IsCastrated { get; set; }
+        public bool IsVaccinated { get; set; }
+        public string HelpStatus { get; set; }
+        public List<Credentials> Credentials { get; set; }
         public DateTime? creationDate { get; set; }
 
     }

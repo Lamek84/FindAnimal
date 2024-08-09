@@ -8,5 +8,7 @@ namespace FindAnimal.Domain
 {
     public class Credentials
     {
+        public string Title { get; set; }
+        public string Description { get; set; }
     }
 }
