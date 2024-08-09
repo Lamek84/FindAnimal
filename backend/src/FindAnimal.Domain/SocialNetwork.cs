@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FindAnimal.Domain
 {
-    public class AnimalType
+    public class SocialNetwork
     {
-        public string Name { get; private set; }
-        public string Description { get; private set; }
+        public string Title { get; private set; }
+        public string Link { get; private set; }
     }
 }
