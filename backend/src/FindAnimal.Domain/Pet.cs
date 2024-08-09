@@ -17,6 +17,7 @@
         public bool IsCastrated { get; private set; }
         public bool IsVaccinated { get; private set; }
         public string HelpStatus { get; private set; }
+        public List<PetPhoto> Photos { get; private set; }
         public List<Credentials> Credentials { get; private set; }
         public DateTime? creationDate { get; private set; }
 
