@@ -1,4 +1,4 @@
-﻿
+
 namespace FindAnimal.Domain.Entities
 {
     public class PetPhoto : Entity

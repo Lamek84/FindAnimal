@@ -1,1 +1,1 @@
-# FindAnimal
+FindAnimal a platform for volunteers and ordinary people looking for pets. Volunteers will be able to create ads for animals in need of homes, and visitors to the site will be able to conveniently view these ads and apply for animals they want to adopt.
