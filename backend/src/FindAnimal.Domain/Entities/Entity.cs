@@ -18,17 +18,19 @@ namespace FindAnimal.Domain.Entities
 
         public override bool Equals(object? obj) 
         {
-           if(obj == null || obj is not Entity) return false;
+           if(obj == null || obj is not Entity other) return false;
 
-           if(ReferenceEquals(this, obj)) return true;
+           if(ReferenceEquals(this, obj) == false) return false;
 
-            Entity other = (Entity)obj;
+           if(GetType() != other.GetType()) return false;
+
             return Id == other.Id;
         }
 
         public static bool operator ==(Entity obj1, Entity obj2)
         {
-            if(obj1 is null || obj2 is null) return false;
+            if (ReferenceEquals(obj1, null) && ReferenceEquals(obj2 ,null)) return true;
+            if (ReferenceEquals(obj1, null) || ReferenceEquals(obj2, null)) return false;
             
             return obj1.Equals(obj2); 
         }
@@ -40,7 +42,7 @@ namespace FindAnimal.Domain.Entities
 
         public override int GetHashCode() 
         {
-            return Id.GetHashCode();
+            return (GetType().ToString() + Id).GetHashCode();
         }
     }
 }
