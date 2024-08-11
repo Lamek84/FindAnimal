@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FindAnimal.Domain.Entities
 {
-    public class Volunteer
+    public class Volunteer : Entity
     {
-        public Guid Id { get; private set; }
+        public Volunteer() { }
+        
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public string Description { get; private set; }
