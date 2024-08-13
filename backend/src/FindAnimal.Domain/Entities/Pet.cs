@@ -7,7 +7,7 @@ namespace FindAnimal.Domain.Entities
         public Pet() { }
         
         public string Name { get; private set; } = string.Empty;
-        public AnimalType Type { get; private set; }
+        public Guid SpeciesId { get; private set; }
         public string Description { get; private set; } = string.Empty;
         public string Breed { get; private set; } = string.Empty; 
         public string Color { get; private set; } = string.Empty;
