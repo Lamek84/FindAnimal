@@ -13,10 +13,9 @@ namespace FindAnimal.Domain.Entities
 
         public Species(SpeciesId id) :base(id) { }
 
-        public Species(SpeciesId id, string name, List<Breed> breeds) : base(id) 
+        public Species(SpeciesId id, string name) : base(id) 
         {
             Name = name;
-            AddBreeds(breeds);
         }
         public string Name { get; private set; }
         public List<Breed> Breeds { get; private set; } = [];
