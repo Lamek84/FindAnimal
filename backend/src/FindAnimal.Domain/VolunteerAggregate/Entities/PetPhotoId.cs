@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FindAnimal.Domain.Entities
+namespace FindAnimal.Domain.VolunteerAggregate.Entities
 {
     public record PetPhotoId
     {
-        private Guid Value { get; }
-        private PetPhotoId(Guid value) 
+        public Guid Value { get; }
+        private PetPhotoId(Guid value)
         {
             Value = value;
         }
 
         public static PetPhotoId NewPetPhotoId() => new(Guid.NewGuid());
         public static PetPhotoId Empty() => new(Guid.Empty);
+        public static PetPhotoId Create(Guid id) => new(id);
     }
 }

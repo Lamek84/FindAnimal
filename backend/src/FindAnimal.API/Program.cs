@@ -1,6 +1,21 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using FindAnimal.Infrastructure;
 
-app.MapGet("/", () => "Hello World!");
+namespace FindAnimal.API
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
 
-app.Run();
+            builder.Services.AddScoped<ApplicationDbContext>();
+
+            var app = builder.Build();
+
+            app.Run();
+        }
+    }
+}
+
+
+
