@@ -5,8 +5,7 @@ namespace FindAnimal.Domain.VolunteerAggregate.Entities.ValueObjects
 {
     public record SocialNetwork
     {
-        public SocialNetwork() { }
-
+        private SocialNetwork() { }
         private SocialNetwork(string title, string link)
         {
             Title = title;

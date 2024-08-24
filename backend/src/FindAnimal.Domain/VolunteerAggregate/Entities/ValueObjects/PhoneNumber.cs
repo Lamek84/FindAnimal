@@ -6,7 +6,7 @@ namespace FindAnimal.Domain.VolunteerAggregate.Entities.ValueObjects
 {
     public record PhoneNumber
     {
-        public PhoneNumber() { }
+        private PhoneNumber() { }
         private PhoneNumber(string number) => Value = number;
 
 

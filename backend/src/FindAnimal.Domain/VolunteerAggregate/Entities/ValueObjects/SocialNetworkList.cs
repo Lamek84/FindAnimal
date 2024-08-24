@@ -12,7 +12,6 @@ namespace FindAnimal.Domain.VolunteerAggregate.Entities.ValueObjects
     public record SocialNetworkList
     {
         private SocialNetworkList() { }
-
         private SocialNetworkList(IEnumerable<SocialNetwork> networkList)
         {
             _snetworkList = (List<SocialNetwork>)networkList;

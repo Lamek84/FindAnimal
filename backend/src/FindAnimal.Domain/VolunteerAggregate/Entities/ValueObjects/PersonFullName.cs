@@ -10,9 +10,8 @@ namespace FindAnimal.Domain.VolunteerAggregate.Entities.ValueObjects
         public string? Patronymic { get; }
 
 
-        public PersonFullName() { }
-
-        public PersonFullName(string firtsName, string lastName, string? patronymic = null)
+        private PersonFullName() { }
+        private PersonFullName(string firtsName, string lastName, string? patronymic = null)
         {
             FirstName = firtsName;
             LastName = lastName;
