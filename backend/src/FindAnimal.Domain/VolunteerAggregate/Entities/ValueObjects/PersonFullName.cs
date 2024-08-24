@@ -1,7 +1,7 @@
 ﻿using CSharpFunctionalExtensions;
 
 
-namespace FindAnimal.Domain.Entities.ValueObjects
+namespace FindAnimal.Domain.VolunteerAggregate.Entities.ValueObjects
 {
     public record PersonFullName
     {
@@ -9,12 +9,15 @@ namespace FindAnimal.Domain.Entities.ValueObjects
         public string LastName { get; }
         public string? Patronymic { get; }
 
-        public PersonFullName(string firtsName, string lastName, string? patronymic=null)
+
+        private PersonFullName() { }
+        private PersonFullName(string firtsName, string lastName, string? patronymic = null)
         {
             FirstName = firtsName;
             LastName = lastName;
             Patronymic = patronymic;
         }
+
 
         public static Result<PersonFullName> Create(string firstName, string lastName, string? patronymic = null)
         {

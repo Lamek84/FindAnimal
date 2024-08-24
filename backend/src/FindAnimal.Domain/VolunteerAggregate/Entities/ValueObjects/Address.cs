@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace FindAnimal.Domain.Entities.ValueObjects
+namespace FindAnimal.Domain.VolunteerAggregate.Entities.ValueObjects
 {
     public record class Address
     {
@@ -16,7 +16,14 @@ namespace FindAnimal.Domain.Entities.ValueObjects
         public string State { get; }
         public string ZipCode { get; }
 
-        private Address(string street, string houseNumber, string city, string state, string zipCode)
+        private Address() { }
+
+        private Address(
+            string street,
+            string houseNumber,
+            string city,
+            string state,
+            string zipCode)
         {
             Street = street;
             HouseNumber = houseNumber;
@@ -27,7 +34,7 @@ namespace FindAnimal.Domain.Entities.ValueObjects
 
         public static Result<Address> Create(string street, string houseNumber, string city, string state, string zipCode)
         {
-           return new Address(street, houseNumber, city, state, zipCode);
+            return new Address(street, houseNumber, city, state, zipCode);
         }
     }
 }

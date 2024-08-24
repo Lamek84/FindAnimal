@@ -1,20 +1,21 @@
 ﻿using CSharpFunctionalExtensions;
 
 
-namespace FindAnimal.Domain.Entities.ValueObjects
+namespace FindAnimal.Domain.VolunteerAggregate.Entities.ValueObjects
 {
     public record SocialNetwork
     {
-        public string Title { get; }
-        public string Link { get; }
-
-        public SocialNetwork() {}
-
+        private SocialNetwork() { }
         private SocialNetwork(string title, string link)
         {
             Title = title;
             Link = link;
         }
+
+
+        public string Title { get; }
+        public string Link { get; }
+
 
         public static Result<SocialNetwork> Create(string title, string link)
         {
